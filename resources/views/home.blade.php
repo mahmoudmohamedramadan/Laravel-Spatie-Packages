@@ -20,7 +20,7 @@
                             <div class="collapse navbar-collapse">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('roles.create') }}" target="_blank">Role</a>
+                                        <a class="nav-link" href="{{ route('roles.create') }}" target="_blank">Roles</a>
                                     </li>
                                 </ul>
                             </div>
