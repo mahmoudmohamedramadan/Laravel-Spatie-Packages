@@ -4,6 +4,9 @@
 
 @section('content')
 
+    <button class="btn btn-primary mb-2 mr-2" style="float: right"
+        onclick="window.location='{{ route('roles.create') }}'">Create a Role</button>
+
     <table class="table table-striped">
         <thead>
             <tr>
