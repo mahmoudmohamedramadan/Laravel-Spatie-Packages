@@ -39,7 +39,7 @@ composer require spatie/laravel-permission
 
 ### Permission Views
 
-then copy my code in <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/permissions">permissions views</a> and <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/roles">roles views</a>
+then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/permissions">permissions views</a> and <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/roles">roles views</a>
 
 ### Permission Controllers
 
@@ -49,7 +49,7 @@ to create `UserRolesController` resource, run the NEXT command
 php artisan make:controller UserRolesController -r
 ```
 
-then copy my code in <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Http/Controllers/UserRolesController.php">UserRolesController.php</a>
+then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Http/Controllers/UserRolesController.php">UserRolesController.php</a>
 
 also to create `UserPermissionsController` resource, run the NEXT command
 
@@ -57,11 +57,11 @@ also to create `UserPermissionsController` resource, run the NEXT command
 php artisan make:controller UserPermissionsController -r
 ```
 
-then copy my code in <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Http/Controllers/UserPermissionsController.php">UserPermissionsController.php</a>
+then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Http/Controllers/UserPermissionsController.php">UserPermissionsController.php</a>
 
 ### Permission Routes
 
-also copy my code in <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L17">roles routes</a> and <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L18">permissions routes</a>
+also copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L17">roles routes</a> and the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L18">permissions routes</a>
 
 ## Laravel Image Optimizer Installation
 
