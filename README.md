@@ -39,7 +39,7 @@ composer require spatie/laravel-permission
 
 ### Permission Views
 
-then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/permissions">permissions views</a> and <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/roles">roles views</a>
+then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/permissions">permissions views</a> and the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/roles">roles views</a>
 
 ### Permission Controllers
 
