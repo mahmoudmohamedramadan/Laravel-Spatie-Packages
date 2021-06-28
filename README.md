@@ -5,6 +5,7 @@
 <ul>
 <li><a href="https://github.com/spatie/laravel-permission">Laravel Permission</a></li>
 <li><a href="https://github.com/spatie/image-optimizer">Laravel Image Optimizer</a></li>
+<li><a href="https://github.com/spatie/laravel-activitylog">Laravel ActivityLog</a></li>
 </ul>
 
 ## Getting Started
@@ -92,3 +93,35 @@ also use `RegisterController` which come WITH Laravel, we'll let the user upload
 ```
 composer dump-autoload
 ```
+
+## Laravel ActivityLog Installation
+
+to install `spatie/laravel-activitylog` package, run the NEXT command
+
+```
+composer require spatie/laravel-activitylog
+```
+
+### ActivityLog Views
+
+then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/logs_activity">logs_activity views</a>
+
+### ActivityLog Models
+
+update the `User` model, to log the user activity
+
+so copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Models/User.php">User.php</a>
+
+### ActivityLog Controllers
+
+to create `UserLogsActivityController` resource, run the NEXT command
+
+```
+php artisan make:controller UserLogsActivityController -r
+```
+
+then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Http/Controllers/UserLogsActivityController.php">UserLogsActivityController.php</a>
+
+### ActivityLog Routes
+
+also copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L25">logs_activity routes</a>
