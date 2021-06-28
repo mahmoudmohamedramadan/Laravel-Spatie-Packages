@@ -10,6 +10,8 @@
                 <div class="card">
                     <div class="card-header">Edit User</div>
                     <div class="card-body">
+                        @include('includes.success', ['key' => 'success'])
+
                         <form action="{{ route('users.update', $user->id) }}" method="POST">
                             @csrf
                             @method('patch')
