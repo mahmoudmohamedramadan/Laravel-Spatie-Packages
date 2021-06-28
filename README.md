@@ -62,7 +62,7 @@ then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Larav
 
 ### Permission Routes
 
-also copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L17">roles routes</a> and the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L18">permissions routes</a>
+also copy the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L17">roles routes</a> and the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L18">permissions routes</a>
 
 ## Laravel Image Optimizer Installation
 
@@ -124,4 +124,4 @@ then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Larav
 
 ### ActivityLog Routes
 
-also copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L25">logs_activity routes</a>
+also copy the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L25">logs_activity routes</a>
