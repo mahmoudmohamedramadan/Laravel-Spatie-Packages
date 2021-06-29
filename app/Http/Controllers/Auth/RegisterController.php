@@ -7,7 +7,6 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Validator;
 use Spatie\ImageOptimizer\OptimizerChainFactory;
 
@@ -67,14 +66,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        if (request()->hasFile('avatar')) {
-            /* store uploaded file, then get the image path */
-            $uploadedImage = request()->file('avatar')->store('public/users');
-            /* get the image's hash name WITH its extension */
-            $data['avatar'] = Str::after($uploadedImage, '/users/');
-            /* get instance from `OptimizerChainFactory::class` then pass the $uploadedImage to `omptimize()` method */
+        $avatar = uploadFile('avatar', 'public/users', '/users/');
+
+        if (!empty($avatar)) {
             $optimizerChain = OptimizerChainFactory::create();
-            $optimizerChain->optimize("storage/users/{$data['avatar']}");
+            $optimizerChain->optimize("storage/users/{$avatar}");
         }
 
         return User::create([
