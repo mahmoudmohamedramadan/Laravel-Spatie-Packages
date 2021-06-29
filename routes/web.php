@@ -7,6 +7,7 @@ use App\Http\Controllers\UserRolesController;
 use App\Http\Controllers\UserPostsController;
 use App\Http\Controllers\UserPermissionsController;
 use App\Http\Controllers\UserLogsActivityController;
+use App\Http\Controllers\UserMediaLibraryController;
 
 Auth::routes();
 
@@ -24,4 +25,5 @@ Route::group(['prefix' => 'users'], function () {
     Route::resource('/posts', UserPostsController::class)->except('show');
     Route::resource('/logs_activity', UserLogsActivityController::class)
         ->except(['create', 'store', 'show', 'edit', 'update']);
+    Route::resource('/media_library', UserMediaLibraryController::class)->except('show', 'edit', 'update');
 });
