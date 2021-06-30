@@ -6,6 +6,7 @@
 <li><a href="https://github.com/spatie/laravel-permission">Laravel Permission</a></li>
 <li><a href="https://github.com/spatie/image-optimizer">Laravel Image Optimizer</a></li>
 <li><a href="https://github.com/spatie/laravel-activitylog">Laravel ActivityLog</a></li>
+<li><a href="https://github.com/spatie/laravel-medialibrary">Laravel MediaLibrary</a></li>
 </ul>
 
 ## Getting Started
@@ -125,3 +126,35 @@ then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Larav
 ### ActivityLog Routes
 
 also copy the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L25">logs_activity routes</a>
+
+## Laravel MediaLibrary Installation
+
+to install `spatie/laravel-medialibrary` package, run the NEXT command
+
+```
+composer require spatie/laravel-medialibrary
+```
+
+### MediaLibrary Views
+
+then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/media_library">media_library views</a>
+
+### MediaLibrary Models
+
+update the `User` model, to interact WITH media
+
+so copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Models/User.php">User.php</a>
+
+### MediaLibrary Controllers
+
+to create `UserMediaLibraryController` resource, run the NEXT command
+
+```
+php artisan make:controller UserMediaLibraryController -r
+```
+
+then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Http/Controllers/UserMediaLibraryController.php">UserMediaLibraryController.php</a>
+
+### MediaLibrary Routes
+
+also copy the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L28">media_library routes</a>
