@@ -15,6 +15,7 @@
                 <th scope="col">User</th>
                 <th scope="col">Title</th>
                 <th scope="col">Body</th>
+                <th scope="col">Tags</th>
             </tr>
         </thead>
         <tbody>
@@ -26,6 +27,11 @@
                         <a href="{{ route('posts.edit', $post->id) }}">{{ $post->title }}</a>
                     </td>
                     <td>{{ $post->body }}</td>
+                    <td>
+                        @foreach ($post->tags as $tag)
+                            {{ $tag->name }}
+                        @endforeach
+                    </td>
                 </tr>
             @endforeach
         </tbody>
