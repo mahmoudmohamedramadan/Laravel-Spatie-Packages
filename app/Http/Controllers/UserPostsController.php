@@ -14,7 +14,13 @@ class UserPostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::get();
+        $posts = Post::with('tags')->get();
+
+        /* retrieving posts that have any of the given tags */
+        // Post::withAnyTags(['python', 'tag2'])->get();
+
+        /* retrieve posts that have all of the given tags */
+        // Post::withAllTags(['python', 'tag2'])->get();
 
         return view('posts.index', compact('posts'));
     }
@@ -39,11 +45,24 @@ class UserPostsController extends Controller
     {
         $data = $this->validatePost($request);
 
-        Post::create([
+        $post = Post::create([
             'user_id' => auth()->id(),
             'title' => $data["title"],
             'body' => $data["body"],
+            // 'tags' => preg_split('/,/', $data['tags']),
         ]);
+
+        /* you can attach only one tag to the saved post */
+        // $post->attachTag('c#');
+        /* or, you can attach an array */
+        // $post->attachTags(['java', 'python']);
+
+        /* you can detach only one tag to the saved post */
+        // $post->detachTag('c#');
+        /* or, you can detach an array */
+        // $post->detachTags(['java', 'python']);
+        /* `syncTags()` method will remove all of the records, and will add `java` and `python`  */
+        // $post->syncTags(['java', 'python']);
 
         return back()->with("success", "data saved successfully");
     }
@@ -74,6 +93,7 @@ class UserPostsController extends Controller
             'user_id' => auth()->id(),
             'title' => $data["title"],
             'body' => $data["body"],
+            'tags' => preg_split('/,/', $data['tags']),
         ]);
 
         return back()->with("success", "data saved successfully");
@@ -103,6 +123,7 @@ class UserPostsController extends Controller
         return $request->validate([
             'title' => 'required|min:5|max:30',
             'body' => 'required|min:5|max:255',
+            'tags' => ['required'],
         ]);
     }
 }
