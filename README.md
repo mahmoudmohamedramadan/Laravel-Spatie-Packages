@@ -7,6 +7,7 @@
 <li><a href="https://github.com/spatie/image-optimizer">Laravel Image Optimizer</a></li>
 <li><a href="https://github.com/spatie/laravel-activitylog">Laravel ActivityLog</a></li>
 <li><a href="https://github.com/spatie/laravel-medialibrary">Laravel MediaLibrary</a></li>
+<li><a href="https://github.com/spatie/laravel-tags">Laravel Tags</a></li>
 </ul>
 
 ## Getting Started
@@ -158,3 +159,31 @@ then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Larav
 ### MediaLibrary Routes
 
 also copy the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L28">media_library routes</a>
+
+## Laravel Tags Installation
+
+to install `spatie/laravel-tags` package, run the NEXT command
+
+```
+composer require spatie/laravel-tags
+```
+
+### Tags Views
+
+at the first, we'll use <a href="https://github.com/bootstrap-tagsinput/bootstrap-tagsinput">tagsinput</a>, so I updated the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/layouts/app.blade.php">app.blade.php</a>, so you must copy the updates
+
+then copy the updates in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/posts/create.blade.php">posts/create.blade.php</a>
+
+### Tags Models
+
+So, at the first copy the updates in the `Post` model, to interact WITH tags
+
+so copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Models/Post.php">Post.php</a>
+
+### Tags Controllers
+
+also we'll use the `UserPostsController` resource, so copy the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Http/Controllers/UserPostsController.php">UserPostsController.php</a> 
+
+### Tags Routes
+
+finally, we'll use the `posts` routes, so we'll do NO updates in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php">web.php</a>
