@@ -48,6 +48,16 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
+
+                            <div class="form-group">
+                                <label>Tag</label>
+                                <input type="text" class="form-control" name="tags" data-role="tagsinput"
+                                    value="{{ $post->tags ?? old('tags') }}" autocomplete="off">
+                                <small class="form-text text-muted">You can add multiple tags separated comma (,)</small>
+                                @error('tags')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
                             {{-- here, we'll check if the authenticated user can create a new post or NOT --}}
                             @can('create post', User::class)
                                 <button type="submit" class="btn btn-primary">Submit</button>
