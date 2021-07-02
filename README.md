@@ -8,6 +8,7 @@
 <li><a href="https://github.com/spatie/laravel-activitylog">Laravel ActivityLog</a></li>
 <li><a href="https://github.com/spatie/laravel-medialibrary">Laravel MediaLibrary</a></li>
 <li><a href="https://github.com/spatie/laravel-tags">Laravel Tags</a></li>
+<li><a href="https://github.com/spatie/period">Laravel Period</a></li>
 </ul>
 
 ## Getting Started
@@ -187,3 +188,35 @@ also we'll use the `UserPostsController` resource, so copy the <a href="https://
 ### Tags Routes
 
 finally, we'll use the `posts` routes, so we'll do NO updates in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php">web.php</a>
+
+## Laravel Period Installation
+
+to install `spatie/period` package, run the NEXT command
+
+```
+composer require spatie/period
+```
+
+### Period Views
+
+then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/feeds">feeds views</a>
+
+### Period Models
+
+update the `Feed` model, to interact WITH period
+
+so copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Models/Feed.php">Feed.php</a>
+
+### Period Controllers
+
+to create `FeedController` resource, run the NEXT command
+
+```
+php artisan make:controller FeedController -r
+```
+
+then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Http/Controllers/FeedController.php">FeedController.php</a>
+
+### Period Routes
+
+also copy the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L30">feeds routes</a>
