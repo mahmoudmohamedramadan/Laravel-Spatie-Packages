@@ -31,8 +31,12 @@
                                         <a class="nav-link" href="{{ route('logs_activity.index') }}" target="_blank">Logs Activity</a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    <li class="nav-item mr-2">
                                         <a class="nav-link" href="{{ route('media_library.create') }}" target="_blank">Media Library</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('feeds.create') }}" target="_blank">Feeds</a>
                                     </li>
                                 </ul>
                             </div>
