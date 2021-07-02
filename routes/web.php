@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\FeedController;
 use App\Http\Controllers\UserRolesController;
 use App\Http\Controllers\UserPostsController;
 use App\Http\Controllers\UserPermissionsController;
@@ -26,4 +27,5 @@ Route::group(['prefix' => 'users'], function () {
     Route::resource('/logs_activity', UserLogsActivityController::class)
         ->except(['create', 'store', 'show', 'edit', 'update']);
     Route::resource('/media_library', UserMediaLibraryController::class)->except('show', 'edit', 'update');
+    Route::resource('/feeds', FeedController::class)->except('show');
 });
