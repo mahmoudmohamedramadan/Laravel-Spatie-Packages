@@ -16,7 +16,8 @@
         "spatie/laravel-activitylog": "^4.0",
         "spatie/laravel-medialibrary": "9.0.0",
         "spatie/laravel-permission": "^4.2",
-        "spatie/laravel-tags": "^4.0"
+        "spatie/laravel-tags": "^4.0",
+        "spatie/period": "^2.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
