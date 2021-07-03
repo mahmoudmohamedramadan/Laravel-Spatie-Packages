@@ -9,6 +9,7 @@
 <li><a href="https://github.com/spatie/laravel-medialibrary">Laravel MediaLibrary</a></li>
 <li><a href="https://github.com/spatie/laravel-tags">Laravel Tags</a></li>
 <li><a href="https://github.com/spatie/period">Laravel Period</a></li>
+<li><a href="https://github.com/spatie/laravel-searchable">Laravel Searchale</a></li>
 </ul>
 
 ## Getting Started
@@ -220,3 +221,29 @@ then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Larav
 ### Period Routes
 
 also copy the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L30">feeds routes</a>
+
+## Laravel Searchable Installation
+
+to install `spatie/laravel-searchable` package, run the NEXT command
+
+```
+composer require spatie/laravel-searchable
+```
+
+### Searchable Views
+
+at the first, we'll prepare our view for searching, so we'll update the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/posts/index.blade.php">index.blade.php</a>
+
+then copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/tree/master/resources/views/posts/search.blade.php">search.blade.php</a>
+
+### Searchable Models
+
+update the `Post` model, so copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Models/Post.php">Post.php</a>
+
+### Searchable Controllers
+
+we'll update the `UserPostsController` resource, so copy my code in the <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/app/Http/Controllers/UserPostsController.php">UserPostsController.php</a>
+
+### Searchable Routes
+
+also we'll update the `posts` routes, so copy my code in <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L26">posts routes</a>
