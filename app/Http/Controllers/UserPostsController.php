@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Spatie\Searchable\Search;
+use Spatie\Searchable\ModelSearchAspect;
 
 class UserPostsController extends Controller
 {
@@ -65,6 +67,25 @@ class UserPostsController extends Controller
         // $post->syncTags(['java', 'python']);
 
         return back()->with("success", "data saved successfully");
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  string  $search
+     * @return \Illuminate\Http\Response
+     */
+    public function show($search)
+    {
+        $posts = (new Search())
+            ->registerModel(Post::class, function (ModelSearchAspect $modelSearchAspect) {
+                $modelSearchAspect
+                    ->addSearchableAttribute('user_id')
+                    ->addSearchableAttribute('title');
+            })
+            ->search($search);
+
+        return view('posts.search', compact('posts'))->render();
     }
 
     /**
