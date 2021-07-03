@@ -5,8 +5,16 @@
 @section('content')
 
     @can('create post', User::class)
-        <button class="btn btn-primary mb-2 mr-2" style="float: right" onclick="window.location='{{ route('posts.create') }}'">Create a Post</button>
+        <button class="btn btn-primary mb-2 mr-2" style="float: right"
+            onclick="window.location='{{ route('posts.create') }}'">Create a Post</button>
     @endcan
+
+    <div class="row">
+        <div class="col-md-8">
+            <input type="search" name="search" placeholder="Type the id of the user or title of the post here..."
+                class="form-control">
+        </div>
+    </div>
 
     <table class="table table-striped">
         <thead>
@@ -38,3 +46,25 @@
     </table>
 
 @stop
+
+@push('scripts')
+
+    <script>
+        $(document).ready(() => {
+            $('input[name=search]').blur(() => {
+                var search = $('input[name=search]').val();
+                $.ajax({
+                    type: 'GET',
+                    url: `/users/posts/${search}`,
+                    success: function(data) {
+                        $('tbody').html(data);
+                    },
+                    error: function(ERROR) {
+                        console.error(ERROR);
+                    }
+                });
+            });
+        });
+    </script>
+
+@endpush
