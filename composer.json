@@ -16,6 +16,7 @@
         "spatie/laravel-activitylog": "^4.0",
         "spatie/laravel-medialibrary": "9.0.0",
         "spatie/laravel-permission": "^4.2",
+        "spatie/laravel-searchable": "^1.10",
         "spatie/laravel-tags": "^4.0",
         "spatie/period": "^2.1"
     },
