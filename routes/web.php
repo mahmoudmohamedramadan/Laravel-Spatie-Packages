@@ -23,7 +23,7 @@ Route::resource('/users', UserController::class)->except(['create', 'store', 'sh
 Route::group(['prefix' => 'users'], function () {
     Route::resource('/roles', UserRolesController::class)->except('show');
     Route::resource('/roles.permissions', UserPermissionsController::class)->except('show');
-    Route::resource('/posts', UserPostsController::class)->except('show');
+    Route::resource('/posts', UserPostsController::class);
     Route::resource('/logs_activity', UserLogsActivityController::class)
         ->except(['create', 'store', 'show', 'edit', 'update']);
     Route::resource('/media_library', UserMediaLibraryController::class)->except('show', 'edit', 'update');
