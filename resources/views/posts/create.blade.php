@@ -46,12 +46,14 @@
                             </div>
                             <div class="form-group">
                                 <label>Tag</label>
-                                <input type="text" class="form-control" name="tags" data-role="tagsinput"
-                                    value="{{ $post->tags ?? old('tags') }}" autocomplete="off">
-                                <small class="form-text text-muted">You can add multiple tags separated comma (,)</small>
-                                @error('tags')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                            <input type="text" class="form-control" name="tags" data-role="tagsinput" value="@if (request()->routeIs('posts.create')) {{ old('tags') }} @else
+                                @foreach ($post->tags as $tag)
+                                    {{ $tag['id'] }} @endforeach @endif" autocomplete="off">
+                                    <small class="form-text text-muted">You can add multiple tags separated comma
+                                        (,)</small>
+                                    @error('tags')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                             </div>
                             {{-- here, we'll check if the authenticated user can create a new post or NOT --}}
                             @can('create post', User::class)
