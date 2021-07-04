@@ -247,3 +247,5 @@ we'll update the `UserPostsController` resource, so copy my code in the <a href=
 ### Searchable Routes
 
 also we'll update the `posts` routes, so copy my code in <a href="https://github.com/mahmoudmohamedramadan/Laravel-Spatie-Packages/blob/master/routes/web.php#L26">posts routes</a>
+
+**congratulations we've finished this tutorial 🎉🔥, and if you want to discover more visit <a href="https://spatie.be/open-source?search=&sort=-downloads">Spatie Packages</a> 🚀**
